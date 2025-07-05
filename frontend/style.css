@@ -1,0 +1,106 @@
+body {
+  text-align: center;
+  color: white;
+  height: 100vh;
+  margin: 0;
+  background: url('https://xettuyen.hcmue.edu.vn/welcome/img/hero-bg.jpg');
+  background-color: rgba(16, 73, 116, 0.6);
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: multiply;
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  margin-top: 60px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+label {
+  color: black;
+  font-weight: bold;
+}
+
+textarea, input, select {
+  background-color: rgba(255,255,255,0.9) !important;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+/* ✅ Navbar cơ bản giống Bootstrap */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.nav-item {
+  position: relative;
+}
+.nav-link {
+  display: block;
+  padding: .5rem 1rem;
+  text-decoration: none;
+}
+
+/* ✅ Dropdown Menu giống Bootstrap */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;           /* Hiển thị ngay dưới link */
+  left: 0;
+  z-index: 1000;
+
+  display: none;
+  min-width: 10rem;
+
+  padding: .5rem 0;
+  margin: .125rem 0 0;
+
+  font-size: 1rem;
+  color: #212529;
+
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.175);
+}
+
+/* Khi được thêm .show thì hiển thị menu */
+.dropdown-menu.show {
+  display: block;
+}
+
+/* Kiểu item trong menu */
+.dropdown-item {
+  display: block;
+  width: 100%;
+
+  padding: .25rem 1rem;
+
+  color: #212529;
+  text-decoration: none;
+
+  background-color: transparent;
+  border: 0;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}

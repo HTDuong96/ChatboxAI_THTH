@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="style.css">
+<body>
+<h3>Đăng nhập</h3>
+<form id="loginForm">
+  <input id="username" placeholder="Tên đăng nhập"><br/>
+  <input id="password" placeholder="Mật khẩu" type="password"><br/>
+  <button>Đăng nhập</button>
+</form>
+<div id="error" style="color:red;"></div>
+
+<script>
+const form = document.getElementById('loginForm');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const username = document.getElementById('username').value.trim();
+  const password = document.getElementById('password').value.trim();
+
+  const resp = await fetch('http://localhost:3000/api/login', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'}, 
+    body: JSON.stringify({username, password})
+  });
+  const data = await resp.json();
+  if(data.success) {
+    localStorage.setItem('token', data.token);
+    window.location.href = 'addForm.html';
+  } else {
+    document.getElementById('error').textContent = 'Sai tài khoản hoặc mật khẩu!';
+  }
+});
+</script>
+</body>
+</html>

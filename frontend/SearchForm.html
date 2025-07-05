@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>📋 Danh sách câu hỏi tuyển sinh</title>
+  <!-- CSS: Bootstrap 5.3.0-alpha1 -->
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container py-4">
+
+  <h3 class="mb-3">📋 Danh sách câu hỏi tuyển sinh THTH</h3>
+<div class="d-flex justify-content-center mt-3">
+  <input 
+    type="text" 
+    id="searchInput" 
+    class="form-control" 
+    style="max-width: 500px;" 
+    placeholder="🔍 Tìm kiếm câu hỏi hoặc trả lời..."
+  />
+</div>
+  <div class="d-flex justify-content-end align-items-center mt-3">
+  <select id="rowsPerPage" class="form-select" style="max-width: 150px;">
+    <option value="5">5 dòng/trang</option>
+    <option value="10">10 dòng/trang</option>
+    <option value="20">20 dòng/trang</option>
+  </select>
+</div>
+
+  <!-- Bảng kết quả -->
+  <table class="table table-bordered table-striped" id="questionTable">
+    <thead>
+      <tr>
+        <th>Câu hỏi</th>
+        <th>Trả lời</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- Phân trang -->
+  <div class="d-flex justify-content-center mt-3" id="paginationControls"></div>
+</body>
+<script src="/main.js"></script>
+</html>

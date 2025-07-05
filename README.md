@@ -1,2 +1,1 @@
-# ChatboxAI_THTH
-
+npm run dev:backend
